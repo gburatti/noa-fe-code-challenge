@@ -1,4 +1,4 @@
-# Noa frontend code challenge
+# Noa Technologies | Code challenge for frontend engineers (React.ts)
 This is a brief evaluation task to assess level of applicants to Noa Technologies frontend engineering positions.
 
 ## Our goals
@@ -24,6 +24,7 @@ Modify the existing app to match the following criteria.
   * ip stats
     * shows user location coordinates and gps accuracy
     * shows user ip data collected from ipinfo
+* App should build correctly for production
 
 ### Constraints
 You should be able to follow this general rules.
