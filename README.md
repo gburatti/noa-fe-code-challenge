@@ -32,7 +32,7 @@ You should be able to follow this general rules.
 * Avoid using classes
 * Data from web api should be fetched just once when page loads
 * Only one user location subscriber should be active at any time
-* App shoud be responsive to every screen size/shape
+* App should be responsive to every screen size/shape
 
 ### Estimated time for completion
 This depends on your base skill, probably anything between 1 and 3 hours.
