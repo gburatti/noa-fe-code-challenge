@@ -38,4 +38,4 @@ You should be able to follow this general rules.
 This depends on your base skill, probably anything between 1 and 3 hours.
 
 ## Submission
-To submit your solution, create a PR for this repo and ask a review.
+Fork the repo, create a PR and ask a review.
