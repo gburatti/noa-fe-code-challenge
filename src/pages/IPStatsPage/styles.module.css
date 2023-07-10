@@ -1,0 +1,41 @@
+.pageWrapper {
+    padding-top: 30px;
+}
+
+.pageWrapper > h1 {
+    margin-bottom: 20px;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.infoCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.card {
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.flag {
+    display: block;
+}
+
+.table {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    .pageWrapper > h1 {
+        font-size: 2rem;
+    }
+
+    .infoCards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
