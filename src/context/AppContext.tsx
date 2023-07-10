@@ -14,13 +14,9 @@ function AppContextProvider({children}: IProps) {
   const [ipInfo, setIPInfo] = useState<IIPInfo>();
 
   useEffect(() => {
-    geolocationService.getCurrentLocation()
-      .then(position => {
-        setLocationData(position)
-      })
-      .catch(err => {
-        alert(err.message)
-      });
+    geolocationService.subscribeToCurrentLocation(position => {
+      setLocationData(position)
+    });
 
     geolocationService.getIPInfo()
       .then(info => {
@@ -29,6 +25,10 @@ function AppContextProvider({children}: IProps) {
       .catch(err => {
         alert(err.message)
       })
+
+    return () => {
+      geolocationService.unsubscribeToCurrentLocation();
+    }
   }, []);
 
   const value: IAppContext = {

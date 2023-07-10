@@ -1,24 +1,30 @@
 import {IIPInfo} from "../types/ipInfo.types";
 
 class GeolocationService {
-  public getCurrentLocation(): Promise<GeolocationCoordinates> {
-    return new Promise((resolve, reject) => {
-      if (navigator.geolocation) {
-        const onSuccess: PositionCallback = (position) => {
-          resolve(position.coords)
-        }
+  private watchId: number = 0;
 
-        const onError: PositionErrorCallback = (positionError) => {
-          reject(positionError)
-        }
-
-        const options: PositionOptions = {
-          enableHighAccuracy: true,
-        }
-
-        navigator.geolocation.getCurrentPosition(onSuccess, onError, options)
+  public subscribeToCurrentLocation(callback: (e: GeolocationCoordinates) => void) {
+    if (navigator.geolocation) {
+      const onSuccess: PositionCallback = (position) => {
+        callback(position.coords)
       }
-    })
+
+      const onError: PositionErrorCallback = (positionError) => {
+        alert(positionError.message)
+      }
+
+      const options: PositionOptions = {
+        // enableHighAccuracy: true,
+      }
+
+      this.watchId = navigator.geolocation.watchPosition(onSuccess, onError, options)
+    }
+  }
+
+  public unsubscribeToCurrentLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.clearWatch(this.watchId);
+    }
   }
 
   public getIPInfo(): Promise<IIPInfo> {
