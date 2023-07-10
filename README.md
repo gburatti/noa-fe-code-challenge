@@ -29,6 +29,7 @@ Modify the existing app to match the following criteria.
 ### Constraints
 You should be able to follow this general rules.
 * Don't intall any external package, everything you need should already be here. If you think that's really mandatory, comment the stuff explaining your decision
+  * NEW: "react-router-dom" was not installed as part of the packages, I installed it for routing to work perfectly
 * Avoid using classes
 * Data from web api should be fetched just once when page loads
 * Only one user location subscriber should be active at any time

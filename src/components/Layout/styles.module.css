@@ -1,0 +1,40 @@
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.header {
+    width: 100%;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.headerContent {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.logo {
+    display: block;
+    height: 70px;
+    padding: 20px;
+}
+
+.logo > img {
+    height: 100%;
+    display: block;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    padding-inline: 20px;
+    font-size: 1rem;
+}
+.navItem:hover {
+    color: #666666;
+}
