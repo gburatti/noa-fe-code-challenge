@@ -1,0 +1,11 @@
+.button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #b3b3b3;
+  font-weight: bold;
+  font-family: monospace;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
