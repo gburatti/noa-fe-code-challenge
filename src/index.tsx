@@ -4,10 +4,14 @@ import ReactDOM from 'react-dom/client';
 
 import App from './App';
 
+import 'leaflet/dist/leaflet.css';
+
+
 /**
  * Since I cannot install external deps (such as Tailwing or others)
  * I defined some utility CSS classes
  */
+import './style/breakpoints.css';
 import './style/style.css';
 
 const root = ReactDOM.createRoot(
@@ -15,7 +19,7 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
 );

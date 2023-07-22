@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const Map: React.FC = () => {
-  return (
-    <div>Map</div>
-  )
-}
+import GeoMap from '../components/GeoMap';
 
-export default Map
+const Map: React.FC = () => (
+  <div className='map-container'>
+    <GeoMap />
+  </div>
+);
+
+export default Map;

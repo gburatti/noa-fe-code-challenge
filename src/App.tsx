@@ -8,15 +8,19 @@ import Map from './views/Map';
 
 import Stats from './views/Stats';
 
+import IpInfoContextProvider from './context/ipinfo-context';
+
 const App: React.FC = () => (
   <BrowserRouter>
-    <Routes>
-      <Route path="*" element={<Layout />}>
-        <Route path="map" element={<Map />} />
-        <Route path="stats" element={<Stats />} />
-        <Route path="*" element={<Navigate to="/map" />} />
-      </Route>
-    </Routes>
+    <IpInfoContextProvider>
+      <Routes>
+        <Route path="*" element={<Layout />}>
+          <Route path="map" element={<Map />} />
+          <Route path="stats" element={<Stats />} />
+          <Route path="*" element={<Navigate to="/map" />} />
+        </Route>
+      </Routes>
+    </IpInfoContextProvider>
   </BrowserRouter>
 );
 

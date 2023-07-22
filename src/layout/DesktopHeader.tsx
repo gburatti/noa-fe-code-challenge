@@ -9,10 +9,8 @@ import { LINKS } from '../utils/constants/navigation.constants';
 const DesktopHeader: React.FC<HeaderProps> = ({ logo, pathname, }) => (
 
   <div
-    className='hidden md-flex w-full box-shadow'
+    className='hidden md-flex w-full box-shadow headerbar'
     style={{
-      justifyContent: 'space-between',
-      alignItems: 'center',
       padding: '1rem 3rem',
     }}
   >

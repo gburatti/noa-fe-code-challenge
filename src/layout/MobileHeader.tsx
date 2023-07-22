@@ -19,10 +19,8 @@ const MobileHeader: React.FC<HeaderProps> = ({ logo, pathname }) => {
 
   return (
     <div
-      className='red-bg flex md-hidden box-shadow'
+      className='red-bg flex md-hidden box-shadow headerbar'
       style={{
-        justifyContent: 'space-between',
-        alignItems: 'center',
         padding: '.2rem .5rem',
       }}
     >
@@ -46,15 +44,17 @@ const MobileHeader: React.FC<HeaderProps> = ({ logo, pathname }) => {
       />
 
       {open && (
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          bottom: 0,
-          right: 0,
-          background: 'white',
-          padding: '.5rem'
-        }}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            background: 'white',
+            padding: '.5rem',
+            zIndex: 999999999,
+          }}
         >
 
           <span

@@ -11,14 +11,7 @@ const Layout: React.FC = () => (
     <Header />
 
     {/* <Outlet> to render what child route is currently active */}
-    <div
-      className='w-full'
-      style={{
-        padding: '1rem'
-      }}
-    >
-      <Outlet />
-    </div>
+    <Outlet />
 
     {/* we could also place a footer or other layout elements in this component */}
   </>
